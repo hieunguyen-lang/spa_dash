@@ -1,13 +1,23 @@
 import { FaUserPlus } from "react-icons/fa";
 
-const employees = [
+type StatusType = "Đang làm" | "Nghỉ phép" | "Nghỉ việc";
+
+const employees: Array<{
+  id: number;
+  name: string;
+  code: string;
+  department: string;
+  position: string;
+  phone: string;
+  status: StatusType;
+}> = [
   { id: 1, name: "Nguyễn Thị A", code: "NV001", department: "Lễ tân", position: "Trưởng nhóm", phone: "0901234567", status: "Đang làm" },
   { id: 2, name: "Trần Văn B", code: "NV002", department: "Kỹ thuật viên", position: "Nhân viên", phone: "0902345678", status: "Nghỉ phép" },
   { id: 3, name: "Lê Thị C", code: "NV003", department: "Chăm sóc khách hàng", position: "Nhân viên", phone: "0903456789", status: "Đang làm" },
   { id: 4, name: "Phạm Văn D", code: "NV004", department: "Kỹ thuật viên", position: "Nhân viên", phone: "0904567890", status: "Nghỉ việc" },
 ];
 
-const statusColor = {
+const statusColor: Record<StatusType, string> = {
   "Đang làm": "bg-green-100 text-green-600",
   "Nghỉ phép": "bg-yellow-100 text-yellow-600",
   "Nghỉ việc": "bg-gray-100 text-gray-500",
