@@ -9,6 +9,10 @@
   --accent: #f472b6;
   --card-bg: #fff;
   --card-shadow: 0 2px 16px 0 rgba(249, 168, 212, 0.08);
+  --color-pink-light: #F8D6D6;
+  --color-pink-main: #E7A6A6;
+  --color-pink-dark: #C97C7C;
+  --color-green-main: #8CA08C;
 }
 
 @theme inline {
@@ -31,7 +35,31 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #FFF6F6;
+  color: #444;
   font-family: var(--font-sans);
+}
+
+button, .btn {
+  background: var(--color-green-main);
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: #6e8b6e;
+}
+
+input, .input {
+  background: #FFF6F6;
+  border: 1px solid var(--color-pink-light);
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+}
+
+nav {
+  background: #fff;
+  border-bottom: 1px solid var(--color-pink-light);
 }
