@@ -25,13 +25,21 @@ const revenueData = [
   { month: 'T12', revenue: 25000 },
 ];
 
-const invoices = [
+type StatusType = 'Đã thanh toán' | 'Chưa thanh toán' | 'Còn nợ';
+
+const invoices: Array<{
+  id: string;
+  customer: string;
+  date: string;
+  amount: string;
+  status: StatusType;
+}> = [
   { id: 'HD001', customer: 'Lê Thị Hoa', date: '2024-05-01', amount: '$1,200', status: 'Đã thanh toán' },
   { id: 'HD002', customer: 'Nguyễn Văn An', date: '2024-05-02', amount: '$800', status: 'Chưa thanh toán' },
   { id: 'HD003', customer: 'Phạm Thị Mai', date: '2024-05-03', amount: '$1,500', status: 'Đã thanh toán' },
   { id: 'HD004', customer: 'Trần Văn Bình', date: '2024-05-04', amount: '$950', status: 'Còn nợ' },
 ];
-const statusColor = {
+const statusColor: Record<StatusType, string> = {
   'Đã thanh toán': 'bg-green-100 text-green-600',
   'Chưa thanh toán': 'bg-yellow-100 text-yellow-600',
   'Còn nợ': 'bg-red-100 text-red-600',
