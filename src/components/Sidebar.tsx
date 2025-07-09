@@ -13,7 +13,7 @@ const menu = [
 
 export default function Sidebar() {
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 bg-white border-r border-pink-100 shadow-xl flex flex-col z-30">
+    <aside className="fixed left-0 top-0 h-full w-64 bg-white shadow-lg border-r border-pink-100 z-20 pt-[60px]">
       <div className="flex items-center gap-3 px-6 py-6 border-b border-pink-100">
         <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-300 to-pink-500 flex items-center justify-center shadow-md">
           <span className="text-white text-2xl font-bold">SPA</span>
