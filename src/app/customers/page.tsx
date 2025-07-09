@@ -1,13 +1,23 @@
 import { FaUserPlus } from "react-icons/fa";
 
-const customers = [
+type StatusType = "VIP" | "Tiềm năng" | "Mới" | "Đã quay lại";
+
+const customers: Array<{
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  dob: string;
+  service: string;
+  status: StatusType;
+}> = [
   { id: 1, name: "Lê Thị Hoa", phone: "0901111222", email: "hoa.le@gmail.com", dob: "1992-05-10", service: "Trị nám", status: "VIP" },
   { id: 2, name: "Nguyễn Văn An", phone: "0902222333", email: "an.nguyen@gmail.com", dob: "1988-11-22", service: "Chăm sóc da", status: "Tiềm năng" },
   { id: 3, name: "Phạm Thị Mai", phone: "0903333444", email: "mai.pham@gmail.com", dob: "1995-03-15", service: "Tắm trắng", status: "Mới" },
   { id: 4, name: "Trần Văn Bình", phone: "0904444555", email: "binh.tran@gmail.com", dob: "1985-08-30", service: "Trị mụn", status: "Đã quay lại" },
 ];
 
-const statusColor = {
+const statusColor: Record<StatusType, string> = {
   "VIP": "bg-pink-100 text-pink-600",
   "Tiềm năng": "bg-yellow-100 text-yellow-600",
   "Mới": "bg-green-100 text-green-600",
